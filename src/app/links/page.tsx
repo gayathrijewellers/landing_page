@@ -56,7 +56,7 @@ export default function LinksPage() {
             <p className=" text-neutral-400 text-xs capitalize">thirthahalli</p>
           </div>
           {links.map((link, index) => (
-            <a href={link.url} className="w-full" target="_blank">
+            <a href={link.url} className="w-full" target="_blank" key={index}>
               <div className="border border-neutral-700 w-[250px] md:w-[300px] p-2 px-4 hover:bg-neutral-800 duration-500 flex justify-between items-center">
                 <div className="flex gap-3 items-center">
                   {link.icon}
