@@ -39,7 +39,7 @@ export default function LinksPage() {
   }
 
   return (
-    <div className="block lg:flex gap-6 h-full lg:p-4">
+    <div className="block lg:flex gap-6 h-full lg:p-4 bg-neutral-900">
       <div className="w-full lg:w-1/2 h-full flex justify-center items-center lg:border border-neutral-800">
         <div className="flex flex-col gap-2">
           <div className="mb-4 flex flex-col justify-center items-center">
