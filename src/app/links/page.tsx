@@ -1,3 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
+"use client";
+
 import {
   ArrowRight,
   ChevronsDown,
@@ -6,7 +9,6 @@ import {
   MessageCircle,
   SquarePen,
 } from "lucide-react";
-import Image from "next/image";
 
 const links = [
   {
@@ -43,7 +45,7 @@ export default function LinksPage() {
       <div className="w-full lg:w-1/2 h-full flex justify-center items-center lg:border border-neutral-800">
         <div className="flex flex-col gap-2">
           <div className="mb-4 flex flex-col justify-center items-center">
-            <Image
+            <img
               src="/logo.svg"
               alt="logo"
               height="2000"

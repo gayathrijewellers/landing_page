@@ -12,6 +12,7 @@ const buttonVariants = cva(
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         borderless:
           "bg-transparent text-primary hover:bg-primary/90 hover:text-accent",
+        border: "bg-transparent border text-black",
       },
     },
     defaultVariants: {
