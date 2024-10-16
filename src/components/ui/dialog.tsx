@@ -1,15 +1,16 @@
 "use client";
 
-import { X } from "lucide-react";
+import { X, XCircle } from "lucide-react";
 import React, { forwardRef, useEffect } from "react";
 interface DialogProps {
   isOpen: boolean;
   onClose: () => void;
+  className?: string;
 }
 const Dialog = forwardRef<
   HTMLDialogElement,
   React.PropsWithChildren<DialogProps>
->(({ isOpen, onClose, children, ...props }, ref) => {
+>(({ isOpen, onClose, children, className, ...props }, ref) => {
   useEffect(() => {
     isOpen
       ? (document.body.style.overflow = "hidden")
@@ -29,11 +30,11 @@ const Dialog = forwardRef<
         open={isOpen}
         onClick={(e) => e.stopPropagation()}
         ref={ref}
-        className="p-2 bg-slate-50 border fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1000]"
+        className={`p-2 h-[90vh] w-full lg:w-1/2 bg-slate-50 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1000] ${className}`}
         {...props}
       >
-        <X
-          className="h-4 w-4 absolute right-0 top-0 cursor-pointer"
+        <XCircle
+          className="h-6 w-6 absolute -right-1 -top-1 cursor-pointer"
           onClick={onClose}
         />
         {children}

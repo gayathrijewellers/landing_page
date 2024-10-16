@@ -2,14 +2,19 @@
 "use client";
 
 import Promotions from "@/components/promotions";
+import Dialog from "@/components/ui/dialog";
 import { Option, Select } from "@/components/ui/select";
 import { COLLECTION_NAMES } from "@/config/collections.config";
 import { RANDOM_PRODUCTS } from "@/config/products.config";
 import { dmSerifDisplay } from "@/lib/fonts";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function Collections() {
   const router = useRouter();
+
+  const [dialogState, setDialogState] = useState<boolean>(false);
+  const [activeImage, setActiveImage] = useState<string>("");
 
   function handleCollectionRoute(e: any) {
     router.push(`/collections/${e}`);
@@ -73,6 +78,10 @@ export default function Collections() {
               key={index}
               id="collection_item"
               className="cursor-pointer overflow-hidden rounded-lg"
+              onClick={() => {
+                setDialogState(!dialogState);
+                setActiveImage(random.image);
+              }}
             >
               <img
                 src={random.image}
@@ -83,6 +92,22 @@ export default function Collections() {
           ))}
         </div>
       </div>
+
+      <Dialog
+        isOpen={dialogState}
+        onClose={() => setDialogState(!dialogState)}
+        className="bg-black"
+      >
+        <picture>
+          <source srcSet={activeImage} type="image/webp" />
+          <img
+            src={activeImage}
+            alt={activeImage}
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </picture>
+      </Dialog>
     </div>
   );
 }
