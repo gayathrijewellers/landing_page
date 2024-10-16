@@ -15,7 +15,7 @@ export default function Hero() {
         loop
         autoPlay
         muted
-        className="absolute brightness-[50%] contrast-125 saturate-[125%] h-full w-full object-left object-cover -z-10"
+        className="absolute brightness-[50%] contrast-125 saturate-[125%] h-full w-full object-cover -z-10"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
       </video>

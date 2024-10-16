@@ -7,11 +7,13 @@ import SavingScheme from "@/components/saving_scheme";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-10 lg:gap-20">
+    <div>
       <Hero />
-      <Promotions />
-      <Collections />
-      <SavingScheme />
+      <div className="flex flex-col gap-10 lg:gap-20 px-2 lg:px-0 mt-4 lg:mt-12">
+        <Promotions />
+        <Collections />
+        <SavingScheme />
+      </div>
     </div>
   );
 }

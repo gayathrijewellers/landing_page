@@ -7,7 +7,7 @@ import { SAVING_SCHEME } from "@/config/saving_scheme.config";
 
 export default function SavingScheme() {
   return (
-    <div className="px-2 lg:px-12 py-12 flex justify-center items-center">
+    <div className="lg:px-12 py-12 flex justify-center items-center">
       <div className="flex flex-col gap-4 lg:gap-8 justify-center">
         <Link href="/saving_scheme">
           <div className="flex flex-col gap-2">
