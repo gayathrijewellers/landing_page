@@ -7,7 +7,7 @@ import Button from "./ui/button";
 
 export default function Collections() {
   return (
-    <div className="px-2 lg:px-12 flex flex-col gap-4 lg:gap-8 justify-center">
+    <div className="lg:px-12 flex flex-col gap-4 lg:gap-8 justify-center">
       <p
         className={`text-3xl lg:text-6xl ${dmSerifDisplay.className} uppercase`}
       >

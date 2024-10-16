@@ -47,7 +47,7 @@ export default function NavBar() {
       </div>
     </div>
   ) : (
-    <div className="w-screen h-screen z-[1000] fixed bg-white px-8">
+    <div className="w-screen h-screen z-[1000] fixed top-0 bg-white px-8">
       <div className="md:hidden flex justify-between items-center py-3">
         <p className={`${dmSerifDisplay.className}`}>Gayathri Jewellers</p>
         <X
@@ -57,16 +57,16 @@ export default function NavBar() {
       </div>
 
       <div className="mt-12 flex flex-col gap-2">
-        <Link href="/">
+        <Link href="/" onClick={() => setNavbBar(!bigNavbar)}>
           <p>Home</p>
         </Link>
-        <Link href="/collections">
+        <Link href="/collections" onClick={() => setNavbBar(!bigNavbar)}>
           <p>Collections</p>
         </Link>
-        <Link href="/saving_scheme">
+        <Link href="/saving_scheme" onClick={() => setNavbBar(!bigNavbar)}>
           <p>Saving Scheme</p>
         </Link>
-        <Link href="/about_us">
+        <Link href="/about_us" onClick={() => setNavbBar(!bigNavbar)}>
           <p>About Us</p>
         </Link>
       </div>
